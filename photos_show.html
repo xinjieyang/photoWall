@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>照片墙</title>
+    <link rel="stylesheet" type="text/css" href="photos_show.css">
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <img class="pic pic1" src="./photo/1.png">
+        <img class="pic pic2" src="./photo/2.png">
+        <img class="pic pic3" src="./photo/3.jpg">
+        <img class="pic pic4" src="./photo/4.jpg">
+        <img class="pic pic5" src="./photo/5.jpg">
+        <img class="pic pic6" src="./photo/6.jpg">
+        <img class="pic pic7" src="./photo/7.jpg">
+        <img class="pic pic8" src="./photo/8.png">
+    </div>
+    <img id="bg" src="./photo/back.jpg" />
+
+    <div id="outerdiv" style="display: none;text-align: center;">
+        <div>关闭</div>
+        <img id="bigimg" style="height: auto;width: 46.6325%;border: 0;
+            margin: auto;position: absolute;top: 0;bottom: 0;left: 0;right: 0;" src="" />
+    </div>
+
+</body>
+
+
+<script>
+    $(document).ready(function() {
+
+        $(".pic").click(function() {
+            var _this = $(this);
+            imgShow("#outerdiv", "#bigimg", _this);
+            console.log(_this.attr("src"))
+        })
+
+
+        function imgShow(outerdiv, bigimg, _this) {
+            var src = _this.attr("src"); //获取当前点击的pimg元素中的src属性
+            $("#outerdiv").attr("display", "block");
+            $("#bigimg").attr("src", src); //设置#bigimg元素的src属性
+            $("#outerdiv").fadeIn("fast");
+
+            $("#outerdiv").click(function() { //再次点击淡出消失弹出层
+                $(this).fadeOut("fast");
+                document.getElementById("#outerdiv").style.display = "none";
+            });
+        }
+
+
+    })
+</script>
+
+
+</html>

@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 192, 203);
+}
+
+.container {
+    width: 100%;
+    height: 80%;
+    margin: 60px auto;
+    position: absolute;
+    background-color: rgb(255, 192, 203);
+}
+
+.pic1 {
+    left: 400px;
+    top: 0;
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+}
+
+.pic2 {
+    left: 100px;
+    top: 10px;
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+}
+
+.pic3 {
+    right: 80px;
+    top: 220px;
+    transform: rotate(-25deg);
+    -webkit-transform: rotate(-5deg);
+}
+
+.pic4 {
+    left: 300px;
+    top: 210px;
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+}
+
+.pic5 {
+    right: 280px;
+    top: 20px;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-15deg);
+}
+
+.pic6 {
+    left: 600px;
+    top: 250px;
+    transform: rotate(5deg);
+    -webkit-transform: rotate(20deg);
+}
+
+.pic7 {
+    left: 20px;
+    top: 200px;
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+
+.pic8 {
+    left: 1000px;
+    top: 0;
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+
+.container img {
+    padding: 10px 10px 15px;
+    background-color: rgb(139, 69, 19);
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.4);
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    position: absolute;
+    z-index: 1;
+}
+
+.pic {
+    width: 200px;
+    margin-right: 1%;
+}
+
+#bg {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+.container>img:hover {
+    box-shadow: 15px 15px 20px rgba(50, 50, 50, 0.4);
+    transform: rotate(0deg) scale(2.20);
+    -webkit-transform: rotate(0deg) scale(1.50);
+    z-index: 1000;
+}
+
+#outerdiv{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.9);
+}
